@@ -1,0 +1,67 @@
+<head>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="/css/partials/magicNav.css">
+</head>
+
+<!--=============== HEADER ===============-->
+
+    <nav class="nav container">
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link active-link">
+                        <i class="fi fi-sr-home nav__icon"></i>
+                        <span class="nav__name">Inicio</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#search" class="nav__link">
+                        <i class="fi fi-rr-search nav__icon"></i>
+                        <span class="nav__name">Buscar</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#chat" class="nav__link">
+                        <i class="fi fi-sr-comment-alt nav__icon"></i>
+                        <span class="nav__name">Chat</span>
+                    </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#profile" class="nav__link">
+                        <i class="fi fi-sr-user nav__icon"></i>
+                        <span class="nav__name">Perfil</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+<main style="width: 100%;">
+    <!--=============== HOME ===============-->
+    <section class="container-section  section__height active-section section-navbar" id="home">
+        <h2 class="section__title">Inicio</h2>
+    </section>
+
+    <!--=============== ABOUT ===============-->
+    <section class="container-section section__height" id="search">
+        {{>home/search/search}}
+    </section>
+
+    <!--=============== SKILLS ===============-->
+    <section class="container-section section__height" id="chat" style="width: 100%;">
+        {{>home/chat/chat}}
+    </section>
+
+    <!--=============== PORTFOLIO ===============-->
+    <section class="container-section section__height" id="profile">
+        <h2 class="section__title">Perfil</h2>
+    </section>
+</main>
+
+
+<!--=============== MAIN JS ===============-->
+<script src="/js/partials/magicNav.js"></script>

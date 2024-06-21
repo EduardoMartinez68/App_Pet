@@ -1,0 +1,57 @@
+/**/
+:root {
+    --color-background: #FAFBFF;
+    --color-company: #4258FF;
+    --color-footer:  #131313;
+    /*rgb(57,78,194);*/
+    --color-hover: rgb(131, 2, 26);
+    /*rgb(46, 62, 151);*/
+    --color-body: rgb(246, 245, 248);
+    
+    --color-session1: rgb(204, 3, 40);
+    /* rgb(57,78,194);*/
+    --color-session2: rgb(170, 1, 32);
+    /* rgb(97, 53, 253);*/
+
+    --color-confirmation: rgb(25, 135, 84);
+    --color-confirmation-hover: rgb(19, 104, 64);
+    --color-cancel: rgb(220, 53, 69);
+    --color-cancel-hover: rgb(187, 44, 58);
+
+}
+
+body{
+    background-color: var(--color-background);
+}
+
+hr{
+    height: 1px; /* Define el grosor del hr */
+    background-color: #ccc; /* Color del hr */
+    border: none; /* Elimina el borde */
+}
+
+.title{
+    color: var(--color-company);
+}
+
+.input {
+    background-color: #ffffff;
+    color: #000000; /* Asegúrate de que el texto sea visible */
+    border: 1px solid #ccc; /* Añade un borde ligero */
+}
+
+.input::placeholder {
+    color: #aaa; /* Color del texto placeholder */
+}
+
+.box{
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.btn{
+    background-color: transparent;
+    color: white;
+    border-color: none;
+}

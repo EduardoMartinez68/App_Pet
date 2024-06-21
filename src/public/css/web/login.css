@@ -1,0 +1,15 @@
+
+.icon-login{
+    width: 140px;
+    height: auto;
+    opacity: 0.2; 
+}
+
+.icon-app-store{
+    width: 100%;
+    height: auto;
+}
+
+.icon-googlestore{
+    margin-top: -10px;
+}
