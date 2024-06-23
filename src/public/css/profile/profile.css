@@ -1,0 +1,32 @@
+.profile-container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #dbdbdb;
+}
+.profile-picture {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.profile-stats div {
+    text-align: center;
+}
+.profile-stats .stat-count {
+    font-weight: bold;
+}
+.profile-bio {
+    padding: 20px;
+    text-align: left;
+}

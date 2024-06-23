@@ -1,0 +1,106 @@
+    <style>
+        .chat-list {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .chat-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #e6e6e6;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .chat-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .chat-item:last-child {
+            border-bottom: none;
+        }
+
+        .chat-item img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        .chat-details {
+            flex: 1;
+            margin-left: 15px;
+        }
+
+        .chat-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .chat-message {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 768px) {
+            .chat-item img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .chat-name {
+                font-size: 1.2rem;
+            }
+
+            .chat-message {
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .chat-item img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .chat-name {
+                font-size: 1.3rem;
+            }
+
+            .chat-message {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+    <section class="section">
+        <h5>Todos los mensajes</h5>
+        <hr>
+        <div class="chat-list">
+            <div class="chat-item">
+                <img src="https://via.placeholder.com/40" alt="User 1">
+                <div class="chat-details">
+                    <p class="chat-name">User 1</p>
+                    <p class="chat-message">Hello, how are you?</p>
+                </div>
+            </div>
+            <div class="chat-item">
+                <img src="https://via.placeholder.com/40" alt="User 2">
+                <div class="chat-details">
+                    <p class="chat-name">User 2</p>
+                    <p class="chat-message">Let's catch up later!</p>
+                </div>
+            </div>
+            <div class="chat-item">
+                <img src="https://via.placeholder.com/40" alt="User 3">
+                <div class="chat-details">
+                    <p class="chat-name">User 3</p>
+                    <p class="chat-message">Can you send me the files?</p>
+                </div>
+            </div>
+        </div>
+    </section>

@@ -1,1 +1,19 @@
-{{>magicNav}}
+<link rel="stylesheet" href="/css/navBarMagic.css"></link>
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-bold-straight/css/uicons-bold-straight.css'>
+<!--home-->
+<section class="navbar-menu" id="navbar-1">
+    {{>home/home/home}}
+</section>
+<!--search-->
+<section class="navbar-menu" id="navbar-2">
+    {{>home/search/search}}
+</section>
+<!--chat-->
+<section class="navbar-menu active" id="navbar-3">
+    {{>home/chat/chat}}
+</section>
+<!--profile-->
+<section class="navbar-menu" id="navbar-4">
+    {{>home/profile/profile}}
+</section>
+{{>home/navBarMagic}}

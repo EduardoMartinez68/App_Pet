@@ -376,7 +376,7 @@ router.get('/login', isNotLoggedIn, async (req, res) => {
     res.render('links/web/login')
 });
 
-router.get('/home', isNotLoggedIn, async (req, res) => {
+router.get('/home', async (req, res) => {
     res.render('links/home/home')
 });
 
