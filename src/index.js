@@ -41,10 +41,7 @@ const pgPool = new pg.Pool({
     host: APP_PG_HOST,
     database: APP_PG_DATABASE,
     password: APP_PG_PASSWORD,
-    port: APP_PG_PORT,
-    ssl: {
-        rejectUnauthorized: false,
-    }
+    port: APP_PG_PORT
 });
 app.use(session({
     secret: 'FudSession',

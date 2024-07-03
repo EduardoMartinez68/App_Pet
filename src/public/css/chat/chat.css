@@ -1,0 +1,49 @@
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.chat-body {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.message-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.chat-message-sender {
+    font-weight: bold;
+}
+
+.chat-message-text {
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.message-right .chat-message-text{
+    background-color: var(--color-company);
+    color: white;
+    max-width: 60%;
+}
+
+.input-message{
+    border-radius: 15px;
+}
+
+
+.card-footer .input-group-append {
+    margin-left: 10px;
+}
+
+.media img {
+    border-radius: 50%;
+}

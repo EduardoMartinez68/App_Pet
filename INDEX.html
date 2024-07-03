@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Selector Button</title>
+    <style>
+        .emoji-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .emoji-button:hover {
+            background-color: #0056b3;
+        }
+
+        .emoji-picker-container {
+            position: relative;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="emoji-picker-container">
+        <button class="emoji-button" id="emoji-button">😊 Select Emoji</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.0/dist/index.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('emoji-button');
+            const picker = new EmojiButton();
+
+            picker.on('emoji', emoji => {
+                console.log(emoji);
+                // Aquí puedes manejar el emoji seleccionado
+            });
+
+            button.addEventListener('click', () => {
+                picker.togglePicker(button);
+            });
+        });
+    </script>
+</body>
+</html>

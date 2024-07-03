@@ -74,4 +74,23 @@ async function delete_image_upload(pathImg){
 }
 
 
+/*
+*--------------------------------------------------------------------------------user--------------------------------------------------------------------------------*
+*/ 
+async function save_new_user(user){
+  try {
+      var queryText = 'INSERT INTO "Fud".users (user_name, first_name,second_name,last_name, email, password, rol_user, id_packs_fud) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)';
+      var values = [user.user_name,user.first_name,user.second_name,user.last_name,user.email,user.password,0,0] 
+      await database.query(queryText, values);
+      return true;
+  } catch (error) {
+      console.error('Error to add the a new user of the database:', error);
+      return false;
+  }
+}
+
+
+
+
+
 module.exports=router;

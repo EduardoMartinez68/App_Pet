@@ -2,68 +2,40 @@ const express=require('express');
 const router=express.Router();
 const passport=require('passport');
 const {isLoggedIn,isNotLoggedIn}=require('../lib/auth');
-//---------------------------------------------------------------------web
-router.get('/fud/signup',isNotLoggedIn,(req,res)=>{
-    //res.render('links/web/singup');
-    res.render('links/web/loginAd');
+
+
+//---------------------------------------------------------------------singup
+router.get('/links/signup',isNotLoggedIn,(req,res)=>{
+    res.render('links/web/singup');
 });
 
-router.get('/fud/login',isNotLoggedIn,(req,res)=>{
+router.post('/links/signup',passport.authenticate('local.signup',{
+    successRedirect: '/links/home',
+    failureRedirect: '/links/signup',
+    failureFlash:true
+}));
+
+//---------------------------------------------------------------------login
+router.get('/links/login',isNotLoggedIn,(req,res)=>{
     res.render('links/web/login');
 });
 
-router.get('/fud/logout',(req,res)=>{
+router.post('/links/login',passport.authenticate('local.login',{
+    successRedirect: '/links/home',
+    failureRedirect: '/links/login',
+    failureFlash:true
+}));
+
+//---------------------------------------------------------------------logout
+router.get('/links/logout',(req,res)=>{
     req.logout(function(err) {
         if (err) {
           console.error('Error al desautenticar:', err);
           return res.status(500).json({ message: 'Error al desautenticar' });
         }
-        res.redirect('/fud/login');
+        res.redirect('/links/login');
     })
 });
-
-router.post('/fud/signup',passport.authenticate('local.signup',{
-        successRedirect: '/fud/home',
-        failureRedirect: '/fud/signup',
-        failureFlash:true
-}));
-
-router.post('/fud/login',passport.authenticate('local.login',{
-    successRedirect: '/fud/home',
-    failureRedirect: '/fud/login',
-    failureFlash:true
-}));
-
-//---------------------------------------------------------------------CEO
-router.post('/fud/addCompany',passport.authenticate('local.add_company',{
-    successRedirect: '/fud/add-company',
-    failureRedirect: '/fud/add-company',
-    failureFlash:true
-}));
-
-router.post('/fud/editCompany',passport.authenticate('local.edit_company',{
-    successRedirect: '/fud/home',
-    failureRedirect: '/fud/home',
-    failureFlash:true
-}));
-
-router.post('/fud/:id/add-department',passport.authenticate('local.add_department',{
-    successRedirect: '/fud/home', // /fud/:id/food-department
-    failureRedirect: '/fud/home',
-    failureFlash:true
-}));
-
-router.post('/fud/:id/add-category',passport.authenticate('local.add_category',{
-    successRedirect: '/fud/home', // /fud/:id/food-department
-    failureRedirect: '/fud/home',
-    failureFlash:true
-}));
-
-router.post('/fud/:id/add-branch',passport.authenticate('local.add_branch',{
-    successRedirect: '/fud/home',
-    failureRedirect: '/fud/home',
-    failureFlash:true
-}));
 
 
 module.exports=router;

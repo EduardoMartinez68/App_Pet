@@ -366,17 +366,24 @@ async function restart_password_send_token(email,token) {
     //we will watching can sen a token to the email of the user 
     return await sendEmail.send_email(toEmail, subjectEmail, message);
 }
+/*
+*term,
+*--------------------------------------------------------------------------------web--------------------------------------------------------------------------------*
+*
+*/ 
 
-//---------------------------------------------------
-router.get('/singup', isNotLoggedIn, async (req, res) => {
-    res.render('links/web/singup')
+//---------------------------------------------------term
+router.get('/terms', isNotLoggedIn, async (req, res) => {
+    res.render('links/web/terms')
 });
 
-router.get('/login', isNotLoggedIn, async (req, res) => {
-    res.render('links/web/login')
-});
 
-router.get('/home', async (req, res) => {
+/*
+*home,
+*--------------------------------------------------------------------------------user--------------------------------------------------------------------------------*
+*
+*/ 
+router.get('/home', isLoggedIn, async (req, res) => {
     res.render('links/home/home')
 });
 

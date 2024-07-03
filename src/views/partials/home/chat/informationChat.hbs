@@ -1,229 +1,54 @@
-<head>
-    <style>
-        /*PROFILE*/
-        .container-profile-friend {
-            width: 100%;
-            background-color: var(--color-company);
-        }
-
-        .icon-profile-chat {
-            border-radius: 50%;
-            height: 50%;
-            max-height: 50px;
-            width: auto;
-        }
-
-        .name-username {
-            margin-left: 1rem;
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: white;
-        }
-
-        .table {
-            table-layout: fixed;
-            /* Fuerza el ancho de la tabla */
-            width: 100%;
-            /* Ocupa todo el ancho disponible */
-        }
-
-        th,
-        td {
-            text-align: center;
-            /* Centra el texto horizontalmente */
-            vertical-align: middle !important;
-            /* Centra el contenido verticalmente */
-            padding: .5rem;
-        }
-
-        /*CHAT*/
-        .chat-container {
-            display: flex;
-            flex-direction: column;
-            height: 80vh;
-            height: 70vh;
-            overflow-y: auto;
-        }
-
-        .chat-messages {
-            flex: 1;
-            overflow-y: auto;
-            padding: 1rem;
-            border-bottom: 1px solid #dbdbdb;
-        }
-
-        .message {
-            margin-bottom: 1rem;
-        }
-
-        .message.is-user {
-            text-align: right;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .chat-input {
-            padding: 1rem;
-            border-top: 1px solid #dbdbdb;
-        }
-
-        .box{
-            width: 40%;
-        }
-
-        .box-user {
-            background-color: var(--color-company);
-        }
-
-        .p-user {
-            color: white;
-            text-align: left;
-        }
-
-        .p-friend {
-            color: black;
-        }
-
-        .p-time {
-            text-align: right;
-            color: black;
-            opacity: 0.7;
-            margin-top: 8px;
-            margin: 0;
-            padding: 0;
-        }
-
-        .fi-button {
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        .username {
-            font-size: 2rem;
-        }
-
-
-
-        /*input chat*/
-        .chat-input {
-            display: flex;
-            border-top: 1px solid #ddd;
-        }
-
-        .chat-input input {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            outline: none;
-        }
-
-        .chat-input button {
-            padding: 10px;
-        }
-
-        .input-chat{
-            width: 90%;
-            height: 50px;
-            border-radius: 15px;
-            padding: 10px 15px;
-            box-sizing: border-box;
-        }
-
-        @media (max-width: 768px) {
-            /*this is for change the size of the message*/
-            .box{
-                width: 90%;
-            }
-
-            /*this is the box text*/
-            .chat-container {
-                display: flex;
-                flex-direction: column;
-                height: 80vh;
-                overflow-y: auto;
-            }
-        }
-    </style>
-</head>
-<!--info firend -->
-<div class="container-profile-friend">
-    <table class="is-fullwidth">
-        <thead>
-            <tr>
-                <th style="width: 10%;"><button class="btn"><i class="fi-button fi-rr-angle-left"></i></button></th>
-                <th style="width: 25%;"><img
-                        src="https://static.vecteezy.com/system/resources/previews/008/424/354/original/cute-siberian-husky-dog-face-icon-illustration-free-vector.jpg"
-                        alt="Icono de perfil" class="icon-profile-chat"></th>
-                <th style="width: 65%;">
-                    <h2 class="username">Username</h2>
-                </th>
-            </tr>
-        </thead>
-    </table>
-</div>
-
-<!-- history chat -->
-<div class="chat-container">
-    <div class="chat-messages" id="chatMessages">
-        <div class="message">
-            <div class="box">
-                <p class="p-friend">Hi! I need some information about your services. ❤️</p>
-                <p class="p-time">7:10 pm</p>
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-1">
+                <button class="btn"><i class="fi fi-rr-angle-left" style="color: black;"></i></button>
+            </div>
+            <div class="col-2">
+                <img src="https://t2.ea.ltmcdn.com/pt/posts/1/4/6/nomes_para_cachorro_husky_21641_600.jpg" alt="User 5"
+                    class="rounded-circle align-self-start mr-3" width="50" height="50">
+            </div>
+            <div class="col">
+                <h6 class="mt-0">Usuario 1</h6>
+                <hr>
             </div>
         </div>
-        <div class="message is-user">
-            <div class="box box-user">
-                <p class="p-user">Hi! I need some information about your services. ❤️</p>
-                <p class="p-time">7:10 pm</p>
-            </div>
+    </div>
+    <div class="card-body chat-body">
+        <div class="chat-message message-left">
+            <div class="chat-message-text">Hola, ¿cómo estás?</div>
         </div>
-        <div class="message">
-            <div class="box">
-                <p class="p-friend">Hi! I need some information about your services. ❤️</p>
-                <p class="p-time">7:10 pm</p>
-            </div>
+        <div class="chat-message message-right">
+            <div class="chat-message-text">Bien, ¿y tú?</div>
         </div>
-        <div class="message is-user">
-            <div class="box box-user">
-                <p class="p-user">Hi! I need some information about your services. ❤️</p>
-                <p class="p-time">7:10 pm</p>
-            </div>
+        <div class="chat-message">
+            <div class="chat-message-text">Muy bien, gracias.</div>
         </div>
-        <div class="message">
-            <div class="box">
-                <p class="p-friend">Hi! I need some information about your services. ❤️</p>
-                <p class="p-time">7:10 pm</p>
-            </div>
-        </div>
-        <div class="message">
-            <div class="box">
-                <p class="p-friend">Hi! I need some information about your services. ❤️</p>
-                <p class="p-time">7:10 pm</p>
-            </div>
-        </div>
-        <div class="message is-user">
-            <div class="box box-user">
-                <p class="p-user">Hi! I need some information about your services. ❤️</p>
-                <p class="p-time">7:10 pm</p>
-            </div>
-        </div>
-        <div class="message is-user">
-            <div class="box box-user">
-                <p class="p-user">Hi! I need some information about your services. ❤️</p>
-                <p class="p-time">7:10 pm</p>
-            </div>
-        </div>
-        <div class="message">
-            <div class="box">
-                <p class="p-friend">Hi! I need some information about your services. ❤️</p>
-                <p class="p-time">7:10 pm</p>
+    </div>
+    <div class="card-footer">
+        <div class="input-group">
+            <textarea type="text" class="form-control input-message" placeholder="Escribe tu mensaje..."></textarea>
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button"><i class="fi fi-sr-paper-plane-top"></i> Enviar</button>
             </div>
         </div>
     </div>
 </div>
 
-<!--chat--->
-<div class="chat-input">
-    <textarea type="text" placeholder="Escribe un mensaje..." class="input-chat"></textarea>
-    <button class="btn"><i class="fi fi-sr-paper-plane-top" style="color: black;"></i></button>
-</div>
+<script src="https://cdn.jsdelivr.net/npm/emoji-mart@3.0.1/dist/emoji-mart.js"></script>
+<script>
+    function toggleEmojiPicker() {
+        const picker = document.getElementById('emoji-picker');
+        picker.classList.toggle('active');
+    }
+
+    const picker = new EmojiMart.Picker({
+        onClick: (emoji) => {
+            console.log(emoji);
+            toggleEmojiPicker();
+        },
+        set: 'apple'
+    });
+
+    document.getElementById('emoji-picker').appendChild(picker);
+</script>

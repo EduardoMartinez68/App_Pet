@@ -1,106 +1,85 @@
-    <style>
-        .chat-list {
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        .chat-item {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            border-bottom: 1px solid #e6e6e6;
-            transition: background-color 0.3s;
-            cursor: pointer;
-        }
-
-        .chat-item:hover {
-            background-color: #f9f9f9;
-        }
-
-        .chat-item:last-child {
-            border-bottom: none;
-        }
-
-        .chat-item img {
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-        }
-
-        .chat-details {
-            flex: 1;
-            margin-left: 15px;
-        }
-
-        .chat-name {
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-
-        .chat-message {
-            color: #888;
-            font-size: 0.9rem;
-        }
-
-        @media (min-width: 768px) {
-            .chat-item img {
-                width: 50px;
-                height: 50px;
-            }
-
-            .chat-name {
-                font-size: 1.2rem;
-            }
-
-            .chat-message {
-                font-size: 1rem;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .chat-item img {
-                width: 60px;
-                height: 60px;
-            }
-
-            .chat-name {
-                font-size: 1.3rem;
-            }
-
-            .chat-message {
-                font-size: 1.1rem;
-            }
-        }
-    </style>
-    <section class="section">
-        <h5>Todos los mensajes</h5>
-        <hr>
-        <div class="chat-list">
-            <div class="chat-item">
-                <img src="https://via.placeholder.com/40" alt="User 1">
-                <div class="chat-details">
-                    <p class="chat-name">User 1</p>
-                    <p class="chat-message">Hello, how are you?</p>
+<div class="row">
+    <!-- Historial de conversaciones -->
+    <div class="col-md-4">
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">
+                <div class="media">
+                    <img src="https://t2.ea.ltmcdn.com/pt/posts/1/4/6/nomes_para_cachorro_husky_21641_600.jpg"
+                        alt="User 1" class="rounded-circle align-self-start mr-3" width="50" height="50">
+                    <div class="media-body">
+                        <h5 class="mt-0">Usuario 1</h5>
+                        Último mensaje...
+                    </div>
                 </div>
-            </div>
-            <div class="chat-item">
-                <img src="https://via.placeholder.com/40" alt="User 2">
-                <div class="chat-details">
-                    <p class="chat-name">User 2</p>
-                    <p class="chat-message">Let's catch up later!</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="media">
+                    <img src="https://t2.ea.ltmcdn.com/pt/posts/1/4/6/nomes_para_cachorro_husky_21641_600.jpg"
+                        alt="User 2" class="rounded-circle align-self-start mr-3" width="50" height="50">
+                    <div class="media-body">
+                        <h5 class="mt-0">Usuario 2</h5>
+                        Último mensaje...
+                    </div>
                 </div>
-            </div>
-            <div class="chat-item">
-                <img src="https://via.placeholder.com/40" alt="User 3">
-                <div class="chat-details">
-                    <p class="chat-name">User 3</p>
-                    <p class="chat-message">Can you send me the files?</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="media">
+                    <img src="https://t2.ea.ltmcdn.com/pt/posts/1/4/6/nomes_para_cachorro_husky_21641_600.jpg"
+                        alt="User 3" class="rounded-circle align-self-start mr-3" width="50" height="50">
+                    <div class="media-body">
+                        <h5 class="mt-0">Usuario 3</h5>
+                        Último mensaje...
+                    </div>
                 </div>
-            </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="media">
+                    <img src="https://t2.ea.ltmcdn.com/pt/posts/1/4/6/nomes_para_cachorro_husky_21641_600.jpg"
+                        alt="User 4" class="rounded-circle align-self-start mr-3" width="50" height="50">
+                    <div class="media-body">
+                        <h5 class="mt-0">Usuario 4</h5>
+                        Último mensaje...
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="media">
+                    <img src="https://t2.ea.ltmcdn.com/pt/posts/1/4/6/nomes_para_cachorro_husky_21641_600.jpg"
+                        alt="User 5" class="rounded-circle align-self-start mr-3" width="50" height="50">
+                    <div class="media-body">
+                        <h5 class="mt-0">Usuario 5</h5>
+                        Último mensaje...
+                    </div>
+                </div>
+            </a>
         </div>
-    </section>
+    </div>
+</div>
+
+
+<script>
+
+    function is_mobile_device() {
+        return window.innerWidth <= 800; // Puedes ajustar este valor según tus necesidades
+    }
+
+    function select_chat() {
+        const columnInformationCaht = document.getElementById('columnInformationCaht');
+        const columnHistoryChat = document.getElementById('columnHistoryChat');
+        //if we is in a cellphone, the column will hide
+        if (is_mobile_device()) {
+            columnInformationCaht.classList.add('column-active');
+            columnHistoryChat.classList.remove('column-active');
+        }
+    }
+
+    function return_histoyr_chat() {
+        const columnInformationCaht = document.getElementById('columnInformationCaht');
+        const columnHistoryChat = document.getElementById('columnHistoryChat');
+        //if we is in a cellphone, the column will hide
+        if (is_mobile_device()) {
+            columnInformationCaht.classList.remove('column-active');
+            columnHistoryChat.classList.add('column-active');
+        }
+    }
+</script>

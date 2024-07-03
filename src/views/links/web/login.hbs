@@ -1,62 +1,31 @@
 <link rel="stylesheet" href="/css/web/login.css">
-<section class="hero is-fullheight">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column is-5-tablet is-4-desktop">
-                    <form class="box">
-                        <center><img src="/img/icon.webp" alt="" class="icon-login"></center>
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card border shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="card-body">
+                    <center><img
+                            src="https://media.istockphoto.com/id/1178218677/vector/cute-siberian-husky-dog-paws-up-over-wall-vector-illustration.jpg?s=612x612&w=0&k=20&c=nyM0TDNp8ACqc2NB6sr7QaZHX5fDKH1wtBaubENokp0="
+                            alt="" class="icon-login"> </center>
+                    <form action="/links/login" method="POST">
+                        <div class="form-group">
+                            <label for="">Correo electronico</label>
+                            <input type="email" class="form-control" id="username" placeholder="Correo electronico" name="userName"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Contraseña</label>
+                            <input type="password" class="form-control" id="password" placeholder="Contraseña" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
                         <br>
-                        <div class="field">
-                            <p class="control has-icons-left">
-                                <input class="input" type="email" placeholder="ejemplo@correo.com" required>
-                                <span class="icon is-small is-left">
-                                    <i class="fi fi-sr-envelope"></i>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="field">
-                            <p class="control has-icons-left">
-                                <input id="password-input" class="input" type="password" placeholder="********"
-                                    required>
-                                <span id="toggle-password-visibility" class="icon is-small is-left">
-                                    <i id="password-icon" class="fi fi-sr-eye"></i>
-                                </span>
-                            </p>
-                        </div>
-
-                        <!-- Botón de inicio de sesión -->
-                        <div class="field">
-                            <div class="control">
-                                <button class="button is-link is-fullwidth">Iniciar Sesión</button>
-                            </div>
-                        </div>
-                        <div class="is-right">
-                            <a href="#" class="is-right">¿Olvidaste tu contraseña?</a>
-                        </div>
-                        <br><br>
-                        <hr>
-                        <p class="has-text-centered">
-                            <a href="/links/singup">¿No tienes una cuenta? Regístrate</a>
-                        </p>
+                        <small><a href="/links/singup">Crear nueva cuenta</a></small>
                     </form>
-                    <br><br>
-                    <center>
-                        <h3><b>Obtenla en:</b></h3>
-                    </center>
-                    <div class="columns">
-                        <div class="column">
-                            <img src="https://www.gov.br/pt-br/imagens-de-servicos/apple.png" alt=""
-                                class="icon-app-store icon-applestore">
-                        </div>
-                        <div class="column">
-                            <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-                                alt="" class="icon-app-store icon-googlestore">
-                        </div>
+                    <div class="text-center mt-3">
+                        <small><a href="#">¿Olvidaste tu contraseña?</a></small>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<script src="/js/web/login.js"></script>
+</div>

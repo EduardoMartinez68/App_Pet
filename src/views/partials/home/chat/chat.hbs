@@ -1,4 +1,10 @@
+<link rel="stylesheet" href="/css/chat/chat.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-mart@3.0.1/css/emoji-mart.css">
 <div class="columns">
-  <div class="column"> {{>home/chat/historyChat}}</div>
-  <div class="column is-two-thirds"> {{>home/chat/informationChat}}</div>
+  <div class="column columnHistoryChat column-active" id="columnHistoryChat"> 
+    {{>home/chat/historyChat}}
+  </div>
+  <div class="column is-two-thirds columnInformationCaht" id="columnInformationCaht"> 
+    {{>home/chat/informationChat}}
+  </div>
 </div>

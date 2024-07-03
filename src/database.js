@@ -12,10 +12,7 @@ const client = new Client({
   host: APP_PG_HOST,
   database: APP_PG_DATABASE,
   password: APP_PG_PASSWORD,
-  port: APP_PG_PORT,
-  ssl: {
-    rejectUnauthorized: false,
-  }
+  port: APP_PG_PORT
 });
 
 client.connect()
@@ -24,6 +21,7 @@ client.connect()
     // Realiza tus operaciones con la base de datos aquí
   })
   .catch((error) => {
+    console.error('database error');
     console.error('Error al conectar a PostgreSQL', error);
   });
 
