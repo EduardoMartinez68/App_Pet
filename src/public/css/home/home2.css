@@ -1,0 +1,80 @@
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.jumbotron {
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-patron-huella-lindo-jugueton-diversion-fauna_1017-44713.jpg?size=626&ext=jpg&ga=GA1.1.1788614524.1719187200&semt=ais_user');
+    padding: 2rem 1rem;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.btn-buy {
+    border-color: #26B36A;
+    color: #26B36A;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-buy:hover {
+    background-color: #26B36A;
+    color: white;
+    transform: scale(1.1);
+}
+
+.logo-carousel .owl-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.btn-lg{
+    background-color: var(--color-company);
+}
+
+
+
+/**/
+.container-category {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+.icon-category {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.container-category:hover .icon-category {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+
+.title-category{
+    font-size: 1.2rem;
+}

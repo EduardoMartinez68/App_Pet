@@ -1,0 +1,33 @@
+.swiper-container {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .swiper-container {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper-container {
+        height: 150px;
+    }
+}

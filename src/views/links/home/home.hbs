@@ -1,19 +1,17 @@
-<link rel="stylesheet" href="/css/navBarMagic.css"></link>
-<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-bold-straight/css/uicons-bold-straight.css'>
-<!--home-->
-<section class="navbar-menu active" id="navbar-1">
-    {{>home/home/home}}
-</section>
-<!--search-->
-<section class="navbar-menu" id="navbar-2">
-    {{>home/search/search}}
-</section>
-<!--chat-->
-<section class="navbar-menu" id="navbar-3">
-    {{>home/chat/chat}}
-</section>
-<!--profile-->
-<section class="navbar-menu" id="navbar-4">
-    {{>home/profile/profile}}
-</section>
-{{>home/navBarMagic}}
+<link rel="stylesheet" href="/css/home/home.css">
+<link rel="stylesheet" href="/css/home/search.css">
+{{>home/home/adCarousel}}
+<br>
+<h4 class="title-welcome"><b>Bienvenido {{user.username}}</b></h4>
+<br>
+{{>home/home/search}}
+<!--this is for show home-->
+<div class="container-home" id="container-home">
+    {{>home/home/pets}}
+    <hr>
+    {{>home/home/services}}
+</div>
+
+
+
+<script src="/js/home/search.js"></script>

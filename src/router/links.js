@@ -84,7 +84,7 @@ async function create_a_new_image(req){
     return '';
 }
 
-async function delate_image(id) {
+async function delete_image(id) {
     var pathImg = await get_image(id);
     const params = {
         Bucket: bucketName,

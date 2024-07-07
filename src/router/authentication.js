@@ -5,13 +5,13 @@ const {isLoggedIn,isNotLoggedIn}=require('../lib/auth');
 
 
 //---------------------------------------------------------------------singup
-router.get('/links/signup',isNotLoggedIn,(req,res)=>{
+router.get('/links/singup',isNotLoggedIn,(req,res)=>{
     res.render('links/web/singup');
 });
 
-router.post('/links/signup',passport.authenticate('local.signup',{
+router.post('/links/singup',passport.authenticate('local.signup',{
     successRedirect: '/links/home',
-    failureRedirect: '/links/signup',
+    failureRedirect: '/links/singup',
     failureFlash:true
 }));
 

@@ -1,0 +1,52 @@
+.container-search {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+
+    /*this is for add a scrollbar*/
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.container-search h6 {
+    text-align: left;
+}
+
+#search-history {
+    list-style-type: none;
+    padding: 0;
+}
+
+#search-history li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+#search-history li:hover{
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.4rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+#search-history li:last-child {
+    border-bottom: none;
+}
+
+.icon-search{
+    width: 20%;
+    height: auto;
+    border-radius: 50%;
+    padding-right: .5rem;
+}
+
+.hidden{
+    display: none;
+}
+
