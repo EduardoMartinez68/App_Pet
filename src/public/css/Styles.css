@@ -144,6 +144,10 @@ hr{
     max-height: 84%;
 }
 
+.navbar-color{
+    background-color: var(--color-company);
+}
+
 /************************************************************/
 /**/
 :root {

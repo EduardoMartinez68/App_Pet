@@ -21,7 +21,6 @@
 .search-container {
     position: relative;
     width: 95%;
-    max-width: 400px; /* Ajusta este valor según sea necesario */
     margin: 0 auto; /* Centrar el buscador */
 }
 

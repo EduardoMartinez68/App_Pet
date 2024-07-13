@@ -387,6 +387,19 @@ router.get('/home', isLoggedIn, async (req, res) => {
     res.render('links/home/home')
 });
 
+/*
+*home,
+*--------------------------------------------------------------------------------admin--------------------------------------------------------------------------------*
+*
+*/ 
+router.get('/add-form', isLoggedIn, async (req, res) => {
+    res.render('links/services/addServices')
+});
+
+router.get('/add-company', isLoggedIn, async (req, res) => {
+    res.render('links/company/addCompany')
+});
+
 
 
 
