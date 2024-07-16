@@ -387,6 +387,10 @@ router.get('/home', isLoggedIn, async (req, res) => {
     res.render('links/home/home')
 });
 
+router.get('/profile', isLoggedIn, async (req, res) => {
+    res.render('links/profile/profile')
+});
+
 /*
 *home,
 *--------------------------------------------------------------------------------admin--------------------------------------------------------------------------------*

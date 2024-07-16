@@ -1,0 +1,164 @@
+<style>
+    .header {
+        padding: 20px;
+        background-color: var(--color-card);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
+
+
+    .profile-pic-container {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        /* Oculta cualquier parte de la imagen que sobresalga */
+        border-radius: 50%;
+    }
+
+    .profile-pic {
+        width: 100%;
+        /* Ajusta automáticamente el tamaño de la imagen */
+        height: auto;
+        display: block;
+    }
+
+    .profile-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+    }
+
+    /*information followers, photo and video*/
+    .fan-stats {
+        display: flex;
+        justify-content: space-around;
+        background-color: var(--color-background);
+        /* Usando la variable de color de fondo */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        margin: 20px auto;
+        color: #fff;
+        /* Texto en color blanco para contraste */
+    }
+
+    .fan-stats div {
+        text-align: center;
+    }
+
+    .fan-stats div span {
+        display: block;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .fan-stats div small {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .description {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.4);
+        text-align: left;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .read_most{
+        background-color: transparent;
+        border-color: transparent;
+        color: white;
+        text-decoration: linen;
+    }
+
+    /*button follow*/
+    .follow-button {
+        background-color: #ff3b3b;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 18px;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+        float: right;
+    }
+
+    .follow-button:hover {
+        background-color: #e62e2e;
+    }
+</style>
+<div class="header">
+    <center>
+        <div class="profile-pic-container">
+            <img src="https://i.dailymail.co.uk/1s/2023/09/05/02/75060329-12480641-She_hinted_at_her_future_career_path_earlier_this_year_when_she_-a-15_1693876437782.jpg"
+                alt="Foto de Perfil" class="profile-pic">
+        </div>
+        <div class="profile-name">Angela White</div>
+        <p class="description">
+            Hola bbs
+            En dado caso que no te acepte tarjeta Fans te dejo link de la pagina azul (dm) y de mi wish list para
+            cualquier regalo Igual hago personalizados a tu gusto y deseo solo mandame mensaje para cotizar tus deseos
+            Cualquier sub se apreciara demasiado , estoy atenta al dm ❤️
+
+            Hello bae
+            In case your card is not accepted in Fansly, I leave you a link to the blue page(dm) and my wish list for
+            any gif I make personalized ones to your taste and desire just send me a message to quote your wishes
+            I will appreciate any sub too much, I am attentive to the dm 💦
+        </p>
+        <button id="toggleButton" class="read_most">Mostrar Más</button>
+        <br>
+        <button id="followButton" class="follow-button"><i class="fi fi-sr-heart"></i> Seguir</button>
+    </center>
+    <br><br>
+    <div class="fan-stats">
+        <div>
+            <span>5,000</span>
+            <small>Seguidores</small>
+        </div>
+        <div>
+            <span>200</span>
+            <small>Fotos</small>
+        </div>
+        <div>
+            <span>50</span>
+            <small>Videos</small>
+        </div>
+    </div>
+    <hr>
+
+</div>
+
+<script>
+    //this is for the description
+    const description = document.querySelector('.description');
+    const toggleButton = document.getElementById('toggleButton');
+
+    let isExpanded = false;
+    let originalText = '';
+
+    toggleButton.addEventListener('click', function () {
+        if (!isExpanded) {
+            // show the text complete
+            description.textContent=originalText;
+            toggleButton.textContent = 'Mostrar Menos';
+            isExpanded = true;
+        } else {
+            // show 100 character
+            description.textContent = originalText.slice(0, 300);
+            toggleButton.textContent = 'Mostrar Más';
+            isExpanded = false;
+        }
+    });
+
+    // save the text origin for show complete after
+    originalText = description.textContent.trim();
+    description.textContent = originalText.slice(0, 300); // show 100 character
+</script>

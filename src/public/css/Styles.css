@@ -1,33 +1,24 @@
-/**/
 :root {
-    --color-background: #F6F5F8;
-    --color-company: #0273FF;
-    --color-footer:  #131313;
-    /*rgb(57,78,194);*/
-    --color-hover: rgb(131, 2, 26);
-    /*rgb(46, 62, 151);*/
-    --color-body: rgb(246, 245, 248);
-    
-    --color-session1: rgb(204, 3, 40);
-    /* rgb(57,78,194);*/
-    --color-session2: rgb(170, 1, 32);
-    /* rgb(97, 53, 253);*/
-
-    --color-confirmation: rgb(25, 135, 84);
-    --color-confirmation-hover: rgb(19, 104, 64);
-    --color-cancel: rgb(220, 53, 69);
-    --color-cancel-hover: rgb(187, 44, 58);
-
+    --color-background: #131313; /* Color de fondo oscuro */
+    --color-company: #ff3b3b; /* Azul oscuro para elementos de la empresa */
+    --color-footer: #F6F5F8; /* Color claro para el pie de página */
+    --color-hover: rgb(131, 2, 26); /* Color de hover */
+    --color-body: #000000; /* Color para el cuerpo de la página */
+    --color-card: #0E0E0E;
+    --color-hr: #1B1B1B;
+    --color-hover: #e62e2e;
 }
 
 body{
     font-family: 'Arial', sans-serif;
-    background-color: var(--color-background);
+    background-color: #2B2A33;
+    margin: 0;
+    padding: 0;
 }
 
 label {
     font-size: 13px;
-    color: rgba(0, 0, 0, .5);
+    color: white;
     padding: 2px;
 }
 
@@ -88,6 +79,9 @@ hr{
     background-color: rgba(0,0,0,.1);
 }
 
+.btn-primary:hover{
+    background-color: var(--color-hover);
+}
 
 
 /*styles messages*/
