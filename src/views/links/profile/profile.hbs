@@ -23,44 +23,43 @@
     }
 
     /**/
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .tabs {
-            display: flex;
-            justify-content: center;
-            list-style-type: none;
-            padding: 0;
-        }
-        .tabs li {
-            margin: 0 10px;
-            cursor: pointer;
-            font-size: 18px;
-            padding: 10px 20px;
-            background-color: #f0f0f0;
-            border-radius: 5px 5px 0 0;
-        }
-        .tabs li.active {
-            background-color: var(--color-company);
-            color: #fff;
-        }
+    .tab-content {
+        display: none;
+    }
+    .tab-content.active {
+        display: block;
+    }
+    .tabs {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+    }
+    .tabs li {
+        margin: 0 10px;
+        cursor: pointer;
+        font-size: 18px;
+        padding: 10px 20px;
+        background-color: #f0f0f0;
+        border-radius: 5px 5px 0 0;
+    }
+    .tabs li.active {
+        background-color: var(--color-company);
+        color: #fff;
+    }
 </style>
 <br><br>
 <div class="container">
     {{>profiles/description}}
     <br>
     <ul class="tabs">
-        <li class="tab-link active" data-tab="tab1">Publicaciones</li>
-        <li class="tab-link" data-tab="tab2">Fotos</li>
-        <li class="tab-link" data-tab="tab3">Videos</li>
+        <li class="tab-link active" data-tab="tab1"><i class="fi fi-br-poll-h"></i> Publications</li>
+        <li class="tab-link" data-tab="tab2"><i class="fi fi-sr-picture"></i> Photo</li>
+        <li class="tab-link" data-tab="tab3"><i class="fi fi-sr-play-alt"></i> Videos</li>
     </ul>
 
     <div id="tab1" class="tab-content active">
-        <h2>Suscripción 1</h2>
-        <p>Contenido y formulario para suscribirse a la cuenta 1.</p>
+        {{>profiles/publications}}
     </div>
     <div id="tab2" class="tab-content">
         {{>profiles/images}}
@@ -70,6 +69,7 @@
         <p>Contenido y formulario para suscribirse a la cuenta 3.</p>
     </div>
 </div>
+<br><br>
 <script>
     // Obtener elementos de las pestañas y contenido
     const tabs = document.querySelectorAll('.tab-link');

@@ -1,0 +1,127 @@
+<style>
+.post-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post {
+    background-color: var(--color-background);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.photo-text-post img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.video-post video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.post-content {
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+    .profile-pic-container-post{
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        /* Hides any part of the image that stands out */
+        border-radius: 50%;
+    }
+
+    .profile-pic-post{
+        width: 100%;
+        height: auto;
+        /* Automatically adjusts the image size */
+        display: block;
+    }
+
+    .name-user-post{
+        color: white;
+    }
+
+    .img-post{
+        width: 100%;
+        height: auto;
+    }
+
+    .time-post{
+        color: rgba(255, 255, 255, 0.5);
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 0.8rem;
+    }
+
+    /*buttons*/
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.like-btn {
+    background-color: #ff6347;
+    color: #fff;
+}
+
+.like-btn:hover {
+    background-color: #e5533d;
+}
+
+.save-btn {
+    background-color: #0273ff;
+    color: #fff;
+}
+
+.save-btn:hover {
+    background-color: #025bb5;
+}
+</style>
+    <div class="post-container">
+        <div class="row">
+            <div class="container-publications post">
+                <div class="row">
+                    <div class="col-1">
+                        <div class="profile-pic-container-post">
+                            <img src="https://img6.hotnessrater.com/6297109/payton-preslee-nude.jpg?w=4000&h=6000"
+                                alt="Foto de Perfil" class="profile-pic-post">
+                        </div>
+                    </div>
+                    <div class="col-11">
+                        <h5 class="name-user-post">Payton Preslee</h5>
+                        <p class="time-post">3 hours ago</p>
+                    </div>
+                </div>
+                <p class="post-content">Esta es una publicación con foto y texto. Puedes agregar una imagen y escribir algo relacionado con la imagen.</p>
+                <center>
+                    <img src="https://cdn.fleshbot.com/uploads/2023/04/141271_019.jpg" alt="Foto de publicación" class="img-post">
+                </center>
+                <br>
+                <div class="button-container">
+                    <button class="btn like-btn"><i class="fi fi-sr-heart"></i></button>
+                    <button class="btn save-btn"><i class="fi fi-sr-disk"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>

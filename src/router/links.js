@@ -391,6 +391,10 @@ router.get('/profile', isLoggedIn, async (req, res) => {
     res.render('links/profile/profile')
 });
 
+router.get('/:id_user/profile', isLoggedIn, async (req, res) => {
+    res.render('links/profile/profile')
+});
+
 /*
 *home,
 *--------------------------------------------------------------------------------admin--------------------------------------------------------------------------------*

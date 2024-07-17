@@ -4,6 +4,10 @@
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 10px;
         padding: 20px;
+        max-height: 800px; /* Ajusta este valor según tus necesidades */
+        overflow-y: auto;
+        scrollbar-width: thin; /* Para navegadores que soportan esta propiedad */
+        scrollbar-color: #333 #1c1c1c;
     }
 
     .grid img {
@@ -68,52 +72,156 @@
         background-color: rgba(0, 0, 0, 0.1);
         /* Color de fondo transparente */
     }
+
+
+    /* Modal estilos */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        padding-top: 60px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    .caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
 </style>
 <div class="card">
     <div class="card-body">
         <div class="grid">
             <div class="photo-container" unlocked="false">
                 <i class="fi fi-sr-lock lock-icon"></i>
-                <img src="https://pbs.twimg.com/media/EGnQf0HU0AEe_rD?format=jpg&name=large" alt="Angela White Image 7"
+                <img src="https://i.ebayimg.com/images/g/mQoAAOSwlcRlYqLw/s-l1200.webp" alt="Angela White Image 7"
                     class="blocked-photo">
                 <div class="image-overlay"></div>
             </div>
 
             <div class="photo-container" unlocked="false">
                 <i class="fi fi-sr-lock lock-icon"></i>
-                <img src="https://i2-prod.mirror.co.uk/incoming/article29728592.ece/ALTERNATES/s1200c/2_Adult-star-Angela-White-celebrates-Black-Friday-with-OnlyFans-sale.jpg"
+                <img src="https://fansutopia.com/cdn/shop/files/payton-preslee-red-fishnet-lingerie-set-733701.jpg?v=1717197487&width=1080"
                     alt="Angela White Image 1" class="blocked-photo">
                 <div class="image-overlay"></div>
             </div>
             <div class="photo-container" unlocked="false">
                 <i class="fi fi-sr-lock lock-icon"></i>
-                <img src="https://i.dailymail.co.uk/1s/2023/05/12/01/70887319-12074945-image-a-27_1683850921486.jpg"
+                <img src="https://fansutopia.com/cdn/shop/files/payton-preslee-dirty-white-lace-bodysuit-285235.jpg?v=1717197484&width=1080"
                     alt="Angela White Image 2" class="blocked-photo">
                 <div class="image-overlay"></div>
             </div>
             <div class="photo-container" unlocked="false">
                 <i class="fi fi-sr-lock lock-icon"></i>
-                <img src="https://qpornx.com/media/images/e/6/0/2/e602e3688005fe9e15149ca99aafda49-23151.jpg"
+                <img src="https://fansutopia.com/cdn/shop/files/payton-preslee-purple-lace-floral-lingerie-set-866712.jpg?v=1717197487&width=1080"
                     alt="Angela White Image 3" class="blocked-photo">
                 <div class="image-overlay"></div>
             </div>
             <div class="photo-container" unlocked="false">
                 <i class="fi fi-sr-lock lock-icon"></i>
-                <img src="https://static-ca-cdn.eporner.com/gallery/u8/hN/oype3oQhNu8/1075458-angela-white-2-broke-girls.jpg"
+                <img src="https://cdni.pornpics.com/460/7/621/78584509/78584509_049_a3ce.jpg"
                     alt="Angela White Image 4" class="blocked-photo">
             </div>
             <div class="photo-container" unlocked="false">
                 <i class="fi fi-sr-lock lock-icon"></i>
-                <img src="https://www.iseekgirls.com/wp-content/uploads/2023/11/Angela-White-Porn-Nude-Squirting-XXX.webp"
+                <img src="https://fapello.com/content/p/a/payton-preslee/1000/payton-preslee_0063.jpg"
                     alt="Angela White Image 5" class="blocked-photo">
             </div>
             <div class="photo-container" unlocked="false">
                 <i class="fi fi-sr-lock lock-icon"></i>
-                <img src="https://pbs.twimg.com/media/DLEj57IVoAAF-2S.jpg:large" alt="Angela White Image 6"
+                <img src="https://i3.wp.com/hot.boombo.biz/uploads/posts/2023-03/1678121085_hot-boombo-biz-p-payton-presley-krasivaya-erotika-95.jpg" alt="Angela White Image 6"
+                    class="blocked-photo">
+            </div>
+            <div class="photo-container" unlocked="false">
+                <i class="fi fi-sr-lock lock-icon"></i>
+                <img src="https://i0.wp.com/cdn.erocurves.com/wp-content/uploads/2022/03/01/payton-preslee-stacked-babe-in-lingerie8.jpg?ssl=1" alt="Angela White Image 6"
+                    class="blocked-photo">
+            </div>
+            <div class="photo-container" unlocked="false">
+                <i class="fi fi-sr-lock lock-icon"></i>
+                <img src="https://img4.hotnessrater.com/6268515/payton-preslee-porn.jpg?w=4000&h=6000" alt="Angela White Image 6"
+                    class="blocked-photo">
+            </div>
+            <div class="photo-container" unlocked="false">
+                <i class="fi fi-sr-lock lock-icon"></i>
+                <img src="https://i0.wp.com/darkkotv.com/content//contentthumbs/01/54/154-4x.jpg" alt="Angela White Image 6"
+                    class="blocked-photo">
+            </div>
+            <div class="photo-container" unlocked="false">
+                <i class="fi fi-sr-lock lock-icon"></i>
+                <img src="https://img.pvvstream.pro/preview/Zt4TpPgH7YI47PRmjpy3zQ/-201904425_456253071/sun9-69.userapi.com/vMezqwICe3JbC74bNzs8k408RKSdq67P3F9w6Q/t4_or139nDk.jpg" alt="Angela White Image 6"
                     class="blocked-photo">
             </div>
         </div>
     </div>
+</div>
+
+<!-- Modal para la imagen en pantalla completa -->
+<div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <div class="caption"></div>
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
 </div>
 
 
@@ -134,6 +242,50 @@
             if (lockIcon) {
                 lockIcon.remove();
             }
+        }
+    });
+</script>
+<script>
+    // Selección de elementos
+    var modal = document.getElementById("modal");
+    var modalImg = document.getElementById("modalImg");
+    var captionText = document.querySelector(".caption");
+    var closeBtn = document.querySelector(".close");
+    var currentIndex;
+    const username=document.getElementById('username').textContent+' ©'; 
+
+    // Mostrar imagen en pantalla completa al hacer clic
+    images.forEach((img, index) => {
+        img.addEventListener("click", function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = username; //this.alt;
+            currentIndex = index;
+        });
+    });
+
+    // Cerrar modal
+    closeBtn.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // Navegación entre imágenes
+    document.querySelector(".prev").addEventListener("click", function () {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        modalImg.src = images[currentIndex].src;
+        captionText.innerHTML = username;//images[currentIndex].alt;
+    });
+
+    document.querySelector(".next").addEventListener("click", function () {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        modalImg.src = images[currentIndex].src;
+        captionText.innerHTML = username;//images[currentIndex].alt;
+    });
+
+    // Cerrar modal al hacer clic fuera de la imagen
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
         }
     });
 </script>

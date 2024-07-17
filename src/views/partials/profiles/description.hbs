@@ -11,13 +11,13 @@
         width: 200px;
         height: 200px;
         overflow: hidden;
-        /* Oculta cualquier parte de la imagen que sobresalga */
+        /* Hides any part of the image that stands out */
         border-radius: 50%;
     }
 
     .profile-pic {
         width: 100%;
-        /* Ajusta automáticamente el tamaño de la imagen */
+        /* Automatically adjusts the image size */
         height: auto;
         display: block;
     }
@@ -33,14 +33,13 @@
         display: flex;
         justify-content: space-around;
         background-color: var(--color-background);
-        /* Usando la variable de color de fondo */
+        /* Using the background color variable */
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         width: 80%;
         margin: 20px auto;
         color: #fff;
-        /* Texto en color blanco para contraste */
     }
 
     .fan-stats div {
@@ -70,7 +69,7 @@
         display: none;
     }
 
-    .read_most{
+    .read_most {
         background-color: transparent;
         border-color: transparent;
         color: white;
@@ -88,52 +87,66 @@
         cursor: pointer;
         margin-top: 20px;
         transition: background-color 0.3s ease;
-        float: right;
     }
 
     .follow-button:hover {
         background-color: #e62e2e;
     }
+
+    /*this is when the user is following to the model*/
+    .following {
+        background-color: transparent;
+        border: 2px solid var(--color-company);
+        border-color: var(--color-company);
+        color: var(--color-company);
+        border-radius: 25px;
+    }
+
+    .following:hover {
+        background-color: var(--color-company);
+        color: white;
+    }
 </style>
 <div class="header">
     <center>
         <div class="profile-pic-container">
-            <img src="https://i.dailymail.co.uk/1s/2023/09/05/02/75060329-12480641-She_hinted_at_her_future_career_path_earlier_this_year_when_she_-a-15_1693876437782.jpg"
+            <img src="https://img6.hotnessrater.com/6297109/payton-preslee-nude.jpg?w=4000&h=6000"
                 alt="Foto de Perfil" class="profile-pic">
         </div>
-        <div class="profile-name">Angela White</div>
+        <div class="profile-name" id="username">Payton Preslee</div>
         <p class="description">
-            Hola bbs
-            En dado caso que no te acepte tarjeta Fans te dejo link de la pagina azul (dm) y de mi wish list para
-            cualquier regalo Igual hago personalizados a tu gusto y deseo solo mandame mensaje para cotizar tus deseos
-            Cualquier sub se apreciara demasiado , estoy atenta al dm ❤️
-
-            Hello bae
-            In case your card is not accepted in Fansly, I leave you a link to the blue page(dm) and my wish list for
-            any gif I make personalized ones to your taste and desire just send me a message to quote your wishes
-            I will appreciate any sub too much, I am attentive to the dm 💦
+            Angela White is an Australian pornographic actress, director, producer and erotic model.❤️
+            She has acted in more than 1,000 films to date, many of her first featuring masturbation or lesbian
+            scenes.💦
+            Como actriz, ha trabajado para diversas productoras como Evil Angel, Reality Kings, Wicked, Brazzers,
+            Archangel, Digital Playground, Blacked, Vixen, Bangbros, Girlsway, New Sensations, Mofos, Pure Taboo, Score,
+            Jules Jordan Video, Elegant Angel, Kink.com, Hard X, Naughty America, Sweetheart Video, Deeper o Girlfriends
+            Films, entre otras muchas.1​
         </p>
-        <button id="toggleButton" class="read_most">Mostrar Más</button>
+        <button id="toggleButton" class="read_most">Show more</button>
         <br>
-        <button id="followButton" class="follow-button"><i class="fi fi-sr-heart"></i> Seguir</button>
+        <!--
+        <button id="followButton" class="follow-button following"><i class="fi fi-sr-heart"></i> Suscribirte</button>
+        <button id="followButton" class="follow-button following"><i class="fi fi-rr-heart"></i> Unsubscribe</button>
+        -->
+        <button id="followButton" class="follow-button"><i class="fi fi-sr-heart"></i> Subscribe</button>
     </center>
     <br><br>
     <div class="fan-stats">
         <div>
             <span>5,000</span>
-            <small>Seguidores</small>
+            <small>Followers</small>
         </div>
         <div>
             <span>200</span>
-            <small>Fotos</small>
+            <small>photos</small>
         </div>
         <div>
             <span>50</span>
-            <small>Videos</small>
+            <small>videos</small>
         </div>
     </div>
     <hr>
-
 </div>
 
 <script>
@@ -147,18 +160,18 @@
     toggleButton.addEventListener('click', function () {
         if (!isExpanded) {
             // show the text complete
-            description.textContent=originalText;
-            toggleButton.textContent = 'Mostrar Menos';
+            description.textContent = originalText;
+            toggleButton.textContent = 'Show less';
             isExpanded = true;
         } else {
             // show 100 character
             description.textContent = originalText.slice(0, 300);
-            toggleButton.textContent = 'Mostrar Más';
+            toggleButton.textContent = 'Show more';
             isExpanded = false;
         }
     });
 
     // save the text origin for show complete after
     originalText = description.textContent.trim();
-    description.textContent = originalText.slice(0, 300); // show 100 character
+    description.textContent = originalText.slice(0, 300); // show only 100 character of the text origin 
 </script>

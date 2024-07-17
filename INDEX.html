@@ -1,51 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emoji Selector Button</title>
-    <style>
-        .emoji-button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+<style>
+/* Modal estilos */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 9999; 
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); 
+}
 
-        .emoji-button:hover {
-            background-color: #0056b3;
-        }
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
 
-        .emoji-picker-container {
-            position: relative;
-            display: inline-block;
-        }
-    </style>
-</head>
-<body>
-    <div class="emoji-picker-container">
-        <button class="emoji-button" id="emoji-button">😊 Select Emoji</button>
+.caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+</style>
+<div class="card">
+    <div class="card-body">
+        <div class="grid">
+            <div class="photo-container" unlocked="false">
+                <i class="fi fi-sr-lock lock-icon"></i>
+                <img src="https://pbs.twimg.com/media/EGnQf0HU0AEe_rD?format=jpg&name=large" alt="Angela White Image 7"
+                    class="blocked-photo">
+                <div class="image-overlay"></div>
+            </div>
+
+            <div class="photo-container" unlocked="false">
+                <i class="fi fi-sr-lock lock-icon"></i>
+                <img src="https://i2-prod.mirror.co.uk/incoming/article29728592.ece/ALTERNATES/s1200c/2_Adult-star-Angela-White-celebrates-Black-Friday-with-OnlyFans-sale.jpg"
+                    alt="Angela White Image 1" class="blocked-photo">
+                <div class="image-overlay"></div>
+            </div>
+            <div class="photo-container" unlocked="false">
+                <i class="fi fi-sr-lock lock-icon"></i>
+                <img src="https://i.dailymail.co.uk/1s/2023/05/12/01/70887319-12074945-image-a-27_1683850921486.jpg"
+                    alt="Angela White Image 2" class="blocked-photo">
+                <div class="image-overlay"></div>
+            </div>
+            <div class="photo-container" unlocked="false">
+                <i class="fi fi-sr-lock lock-icon"></i>
+                <img src="https://qpornx.com/media/images/e/6/0/2/e602e3688005fe9e15149ca99aafda49-23151.jpg"
+                    alt="Angela White Image 3" class="blocked-photo">
+                <div class="image-overlay"></div>
+            </div>
+            <div class="photo-container" unlocked="false">
+                <i class="fi fi-sr-lock lock-icon"></i>
+                <img src="https://static-ca-cdn.eporner.com/gallery/u8/hN/oype3oQhNu8/1075458-angela-white-2-broke-girls.jpg"
+                    alt="Angela White Image 4" class="blocked-photo">
+            </div>
+            <div class="photo-container" unlocked="false">
+                <i class="fi fi-sr-lock lock-icon"></i>
+                <img src="https://www.iseekgirls.com/wp-content/uploads/2023/11/Angela-White-Porn-Nude-Squirting-XXX.webp"
+                    alt="Angela White Image 5" class="blocked-photo">
+            </div>
+            <div class="photo-container" unlocked="false">
+                <i class="fi fi-sr-lock lock-icon"></i>
+                <img src="https://pbs.twimg.com/media/DLEj57IVoAAF-2S.jpg:large" alt="Angela White Image 6"
+                    class="blocked-photo">
+            </div>
+        </div>
     </div>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.0/dist/index.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const button = document.getElementById('emoji-button');
-            const picker = new EmojiButton();
+<!-- Modal para la imagen en pantalla completa -->
+<div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <div class="caption"></div>
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+</div>
 
-            picker.on('emoji', emoji => {
-                console.log(emoji);
-                // Aquí puedes manejar el emoji seleccionado
-            });
 
-            button.addEventListener('click', () => {
-                picker.togglePicker(button);
-            });
-        });
-    </script>
-</body>
-</html>
+<script>
+// Selección de elementos
+var modal = document.getElementById("modal");
+var modalImg = document.getElementById("modalImg");
+var captionText = document.querySelector(".caption");
+var closeBtn = document.querySelector(".close");
+var images = document.querySelectorAll(".photo-container img");
+var currentIndex;
+
+// Mostrar imagen en pantalla completa al hacer clic
+images.forEach((img, index) => {
+    img.addEventListener("click", function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+        currentIndex = index;
+    });
+});
+
+// Cerrar modal
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Navegación entre imágenes
+document.querySelector(".prev").addEventListener("click", function() {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+    modalImg.src = images[currentIndex].src;
+    captionText.innerHTML = images[currentIndex].alt;
+});
+
+document.querySelector(".next").addEventListener("click", function() {
+    currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+    modalImg.src = images[currentIndex].src;
+    captionText.innerHTML = images[currentIndex].alt;
+});
+
+// Cerrar modal al hacer clic fuera de la imagen
+window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+</script>
