@@ -1,0 +1,97 @@
+<style>
+
+    :root {
+        --color-background: #131313; /* Color de fondo oscuro */
+        --color-company: #ff3b3b; /* Azul oscuro para elementos de la empresa */
+        --color-footer: #F6F5F8; /* Color claro para el pie de página */
+        --color-hover: rgb(131, 2, 26); /* Color de hover */
+        --color-body: #000000; /* Color para el cuerpo de la página */
+        --color-card: #0E0E0E;
+        --color-hr: #1B1B1B;
+    }
+
+    body{
+        background-color: var(--color-body);
+    }
+
+    .card{
+        background-color: var(--color-card);
+    }
+
+    hr{
+        color: var(--color-hr);
+    }
+
+    /**/
+    .tab-content {
+        display: none;
+    }
+    .tab-content.active {
+        display: block;
+    }
+    .tabs {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0;
+    }
+    .tabs li {
+        margin: 0 10px;
+        cursor: pointer;
+        font-size: 18px;
+        padding: 10px 20px;
+        background-color: #f0f0f0;
+        border-radius: 5px 5px 0 0;
+    }
+    .tabs li.active {
+        background-color: var(--color-company);
+        color: #fff;
+    }
+</style>
+<br><br>
+<div class="container">
+    {{>profiles/description}}
+    {{>profiles/aformPost}}
+    <br>
+    <ul class="tabs">
+        <li class="tab-link active" data-tab="tab1"><i class="fi fi-br-poll-h"></i> Publications</li>
+        <li class="tab-link" data-tab="tab2"><i class="fi fi-sr-picture"></i> Photo</li>
+        <li class="tab-link" data-tab="tab3"><i class="fi fi-sr-play-alt"></i> Videos</li>
+    </ul>
+
+    <div id="tab1" class="tab-content active">
+        {{>profiles/publications}}
+    </div>
+    <div id="tab2" class="tab-content">
+        {{>profiles/images}}
+    </div>
+    <div id="tab3" class="tab-content">
+        <h2>Suscripción 3</h2>
+        <p>Contenido y formulario para suscribirse a la cuenta 3.</p>
+    </div>
+</div>
+<br><br>
+<script>
+    // Obtener elementos de las pestañas y contenido
+    const tabs = document.querySelectorAll('.tab-link');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    // Manejar clic en las pestañas
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Activar pestaña seleccionada
+            tabs.forEach(item => item.classList.remove('active'));
+            tab.classList.add('active');
+
+            // Mostrar contenido de la pestaña seleccionada
+            const tabId = tab.getAttribute('data-tab');
+            tabContents.forEach(content => {
+                if (content.id === tabId) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>

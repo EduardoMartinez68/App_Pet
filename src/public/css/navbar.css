@@ -1,3 +1,8 @@
 .text-navbar, .fi-text{
     font-size: 1rem;
   }
+
+.icon-navbar{
+  width: 100%;
+  height: auto;
+}

@@ -1,3 +1,4 @@
+/*
 //disable keybinds
 document.addEventListener('keydown', function(event) {
     if (event.key === 'PrintScreen') {
@@ -31,3 +32,4 @@ window.onload = function() {
         }
     });
 }
+    */

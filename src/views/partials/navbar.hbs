@@ -12,38 +12,11 @@
                       <i class="fi-des fi-br-cross" id="btn-navbar-cancel"></i>
                   </label>
                   <div class="sidebar">
-                      {{#if company}}
-                          {{#each company}}
-                              <header>{{alias}}</header>
-                          {{/each}}
-                          {{else}}
-                              {{#if branch}}
-                                  {{#each branch}}
-                                      <header>{{name_branch}}</header>
-                                  {{/each}}
-                              {{else}}
-                              <header>QueRico 🍑</header>
-                          {{/if}}
-                          {{/if}}
-                          <ul class="scroll-navbar">
-                              {{#each company}}
-                              <li><a href="company-home" class="text-navbar"><i class="fi-icon fi-sr-apps"> Dashboard</i></a></li>
-                              <li><a href="/fud/{{id}}/branches" ><i class="fi-icon fi-sr-store-alt"> Branches</i></a></li>
-                              <li><a href="/fud/{{id}}/employees"><i class="fi-icon fi-sr-hat-chef"> Employees</i></a></li>
-                              <li><a href="/fud/{{id}}/customers-company"><i class="fi-icon fi-sr-user"> Customers</i></a>
-                              </li>
-                              <li><a href="/fud/{{id}}/company-supplies"><i class="fi-icon fi-sr-apple-whole">
-                                          Supplies</i></a></li>
-                              <li><a href="/fud/{{id}}/company-products"><i class="fi-icon fi-ss-hamburger"> Products</i></a>
-                              </li>
-                              <li><a href="/fud/{{id}}/combos"><i class="fi-icon fi-sr-restaurant"> Combos</i></a></li>
-                              <li><a href="/fud/{{id}}/providers"><i class="fi-icon fi-ss-truck-side"> Providers</i></a></li>
-                              <li><a href="/fud/{{id}}/reports"><i class="fi-icon fi-ss-files-medical"> Reports</i></a></li>
-                              <li><a href="/fud/{{id}}/options"><i class="fi-icon fi-sr-settings"> Options</i></a></li>
-                              <li><a href="/fud/home"><i class="fi-icon fi-sr-undo"> Exit</i></a></li>
-                          {{/each}}
-                          <li><a href="/links/logout" class="text-navbar"><i class="fi-icon fi-br-exit fi-text"> Cerrar sesión</i></a></li>
-                      </ul>
+                        <header>QueRico 🍑</header>
+                        <ul class="scroll-navbar">
+                            <li><a href="/links/{{user.id}}/my-profile" class="text-navbar"><i class="fi-icon fi-sr-user fi-text"> My profile</i></a></li>
+                            <li><a href="/links/logout" class="text-navbar"><i class="fi-icon fi-br-exit fi-text"> Sign off</i></a></li>
+                        </ul>
                   </div>
               </ul>
               <ul class="titleDesciption">
@@ -76,23 +49,17 @@
 <script>
     function delete_role() {
         const labelRol = document.getElementById('roleUser')
-        console.log('labelRol')
-        console.log(labelRol)
         const roleUser = labelRol.getAttribute('rolUser')
-        console.log(roleUser)
         if (roleUser >= 1) {
             labelRol.remove();
         }
     }
     delete_role()
 </script>
+
 <!--this script will be that the description of the web choose depending in where is the user-->
 <script>
-    var url = window.location.href;
-    var works = url.split("/");
-    var description = works.pop();
     document.getElementById("des").textContent = 'QueRico'// text_convert(description);
-
     function text_convert(title) {
         var textConvert = title.replace(/-/g, ' ');
         if (textConvert == '') {
